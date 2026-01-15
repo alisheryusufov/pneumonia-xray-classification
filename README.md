@@ -1,8 +1,6 @@
-# 🫁 Pneumonia Detection from Chest X-Ray (RSNA Pneumonia Detection Challenge)
+# 🫁 Pneumonia Classification from Chest X-Ray (RSNA Pneumonia Detection Challenge)
 
-This repository contains a deep learning pipeline for detecting pneumonia from chest X-ray images. The model was trained and evaluated on the **RSNA Pneumonia Detection Challenge dataset** from Kaggle.
-
-The focus of this project is to demonstrate real medical image analysis skills, including preprocessing, model training, evaluation, and interpretability.
+This repository contains a deep learning pipeline for classifying pneumonia from chest X-ray images. The model was trained and evaluated on the **RSNA Pneumonia Detection Challenge dataset** from Kaggle.
 
 ---
 
@@ -19,7 +17,7 @@ This project uses the **RSNA Pneumonia Detection Challenge** dataset:
 - The dataset provides:
   - `train_images/` — training chest X-ray DICOM files
   - `test_images/` — test DICOM files
-  - `train.csv` — bounding box and label annotations
+  - `train_labels.csv` — bounding box and label annotations
   - Metadata indicating whether a study has pneumonia
 - This project uses the provided labels to create a **binary classification task** (pneumonia vs normal).
 
@@ -42,12 +40,13 @@ This project uses the **RSNA Pneumonia Detection Challenge** dataset:
 - **Modification:** First convolution changed to accept single-channel (grayscale) X-rays
 - **Output:** 1 logit → sigmoid output for pneumonia probability
 - **Loss:** Binary Cross-Entropy with logits (with `pos_weight` for class imbalance)
-- **Optimization:** AdamW with ReduceLROnPlateau scheduler
+- **Optimization:** Adam optimizer
 
 ---
 
 ## 📊 Quantitative Results
 Validation AUROC: 0.913
+
 ![AUROC and Metrics](results/metrics.png)
 
 
