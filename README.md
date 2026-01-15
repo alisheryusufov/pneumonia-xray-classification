@@ -1,4 +1,4 @@
-# 🫁 Pneumonia Classification from Chest X-Ray (RSNA Pneumonia Detection Challenge)
+# 🫁 Pneumonia Classification from Chest X-Ray
 
 This repository contains a deep learning pipeline for classifying pneumonia from chest X-ray images. The model was trained and evaluated on the **RSNA Pneumonia Detection Challenge dataset** from Kaggle.
 
